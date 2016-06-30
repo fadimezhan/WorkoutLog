@@ -1,7 +1,6 @@
-%h1 Home Page
-#workouts
+#index_workouts
   - @workouts.each do |workout|
-    %h1= link_to workout.date, workout
-    %h2= workout.workout
-
-=link_to "New Workout", new_workout_path
+    %h2= link_to workout.date.strftime("%A %B %d"), workout
+    %h3
+      %span Workout:
+      = workout.workout
